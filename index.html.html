@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Notes | Premium Portfolio Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Animated Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <div class="logo-shape logo-shape-1"></div>
+                <div class="logo-shape logo-shape-2"></div>
+                <div class="logo-shape logo-shape-3"></div>
+            </div>
+            <div class="preloader-text">
+                <span class="loading-text">Loading Premium Experience</span>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="main-container">
+        <!-- Landing Page -->
+        <section class="page active" id="landing-page">
+            <div class="particles-background" id="particles"></div>
+            <div class="gradient-overlay"></div>
+            
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">N</span>
+                    <span class="logo-text">Nexus<span class="logo-highlight">Notes</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link" data-hover="About">About</a>
+                    <a href="#" class="nav-link" data-hover="Features">Features</a>
+                    <a href="#" class="nav-link" data-hover="Contact">Contact</a>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <div class="hero-badge">
+                        <span class="badge-text">Premium Portfolio Platform</span>
+                        <div class="badge-glow"></div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Craft Your</span>
+                        <span class="title-line">
+                            <span class="title-highlight">Digital Legacy</span>
+                        </span>
+                    </h1>
+                    <p class="hero-subtitle">A cinematic portfolio experience with seamless note-sharing capabilities for creators, thinkers, and innovators.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label">Premium Users</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="1200">0</span>
+                            <span class="stat-label">Shared Notes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="98">0</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-action">
+                    <button class="enter-btn" id="enter-workspace">
+                        <span class="btn-text">Enter Workspace</span>
+                        <div class="btn-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <p class="enter-hint">Experience cinematic portfolio management</p>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll for details</span>
+            </div>
+        </section>
+
+        <!-- Login Page -->
+        <section class="page" id="login-page">
+            <div class="login-background">
+                <div class="login-shape shape-1"></div>
+                <div class="login-shape shape-2"></div>
+                <div class="login-shape shape-3"></div>
+            </div>
+            
+            <div class="login-container">
+                <div class="login-header">
+                    <button class="back-btn" id="back-to-landing">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2 class="login-title">Access Your <span class="text-gradient">Workspace</span></h2>
+                    <p class="login-subtitle">Enter your credentials to access your premium portfolio</p>
+                </div>
+
+                <form class="login-form" id="login-form">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="text" id="username" class="login-input" required>
+                            <label for="username" class="input-label">
+                                <i class="fas fa-user input-icon"></i>
+                                <span class="label-text">Username</span>
+                            </label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <div class="input-hint">Enter your unique username</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input type="password" id="password" class="login-input" required>
+                            <label for="password" class="input-label">
+                                <i class="fas fa-lock input-icon"></i>
+                                <span class="label-text">Password</span>
+                            </label>
+                            <div class="input-underline"></div>
+                            <button type="button" class="toggle-password" id="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="input-hint">Minimum 8 characters</div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn" id="login-submit">
+                        <span class="btn-text">Access Workspace</span>
+                        <div class="btn-loader">
+                            <div class="loader-spinner"></div>
+                        </div>
+                    </button>
+
+                    <div class="demo-credentials">
+                        <p class="demo-title">Demo Credentials:</p>
+                        <p class="demo-account">Admin: <code>pulak</code> / <code>07082008</code></p>
+                        <p class="demo-account">Any other credentials for New User</p>
+                    </div>
+                </form>
+
+                <div class="login-footer">
+                    <p class="footer-text">New to NexusNotes? <a href="#" class="signup-link">Request Access</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section class="page" id="admin-dashboard">
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-header">
+                        <div class="admin-avatar">
+                            <div class="avatar-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Admin Avatar">
+                                <div class="avatar-status"></div>
+                            </div>
+                            <div class="avatar-info">
+                                <h3 class="admin-name">Pulak Sharma</h3>
+                                <p class="admin-role">Admin • Founder</p>
+                            </div>
+                        </div>
+                        <button class="sidebar-toggle" id="sidebar-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <nav class="sidebar-nav">
+                        <a href="#" class="nav-item active" data-section="overview">
+                            <i class="fas fa-chart-pie nav-icon"></i>
+                            <span class="nav-text">Overview</span>
+                            <span class="nav-badge">3</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="portfolio">
+                            <i class="fas fa-briefcase nav-icon"></i>
+                            <span class="nav-text">Portfolio</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="notes">
+                            <i class="fas fa-sticky-note nav-icon"></i>
+                            <span class="nav-text">Notes</span>
+                            <span class="nav-badge">12</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="upload">
+                            <i class="fas fa-cloud-upload-alt nav-icon"></i>
+                            <span class="nav-text">Upload Notes</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="analytics">
+                            <i class="fas fa-chart-line nav-icon"></i>
+                            <span class="nav-text">Analytics</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="settings">
+                            <i class="fas fa-cog nav-icon"></i>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <div class="sidebar-footer">
+                        <button class="logout-btn" id="admin-logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="dashboard-main">
+                    <header class="dashboard-header">
+                        <div class="header-left">
+                            <h1 class="dashboard-title">Admin Dashboard</h1>
+                            <p class="dashboard-subtitle">Welcome back, Pulak. You have <span class="highlight">3 new notifications</span></p>
+                        </div>
+                        <div class="header-right">
+                            <div class="search-bar">
+                                <i class="fas fa-search search-icon"></i>
+                                <input type="text" class="search-input" placeholder="Search notes, users...">
+                            </div>
+                            <div class="header-actions">
+                                <button class="notification-btn">
+                                    <i class="fas fa-bell"></i>
+                                    <span class="notification-badge">3</span>
+                                </button>
+                                <button class="theme-toggle" id="theme-toggle">
+                                    <i class="fas fa-moon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="dashboard-content">
+                        <!-- Overview Section -->
+                        <div class="section active" id="overview-section">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-value">2,847</h3>
+                                        <p class="stat-label">Total Users</p>
+                                    </div>
+                                    <div class="stat-trend trend-up">
+                                        <i class="fas fa-arrow-up"></i>
+                                        <span>12%</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-sticky-note"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-value">1,243</h3>
+                                        <p class="stat-label">Shared Notes</p>
+                                    </div>
+                                    <div class="stat-trend trend-up">
+                                        <i class="fas fa-arrow-up"></i>
+                                        <span>8%</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-value">45.2K</h3>
+                                        <p class="stat-label">Total Views</p>
+                                    </div>
+                                    <div class="stat-trend trend-up">
+                                        <i class="fas fa-arrow-up"></i>
+                                        <span>23%</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-value">98%</h3>
+                                        <p class="stat-label">Satisfaction</p>
+                                    </div>
+                                    <div class="stat-trend trend-down">
+                                        <i class="fas fa-arrow-down"></i>
+                                        <span>2%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent-notes">
+                                <h2 class="section-title">Recent Notes</h2>
+                                <div class="notes-grid" id="admin-notes-grid">
+                                    <!-- Notes will be populated here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Section -->
+                        <div class="section" id="portfolio-section">
+                            <h2 class="section-title">Portfolio Management</h2>
+                            <!-- Portfolio content -->
+                        </div>
+
+                        <!-- Notes Section -->
+                        <div class="section" id="notes-section">
+                            <h2 class="section-title">Notes Management</h2>
+                            <!-- Notes content -->
+                        </div>
+
+                        <!-- Upload Section -->
+                        <div class="section" id="upload-section">
+                            <h2 class="section-title">Upload New Note</h2>
+                            <div class="upload-area" id="upload-area">
+                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                <h3 class="upload-title">Drag & Drop to Upload</h3>
+                                <p class="upload-subtitle">or click to browse files</p>
+                                <input type="file" id="file-upload" accept=".txt,.pdf,.md">
+                                <p class="upload-hint">Supports: .txt, .pdf, .md (Max 10MB)</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <!-- New User Dashboard -->
+        <section class="page" id="user-dashboard">
+            <div class="user-container">
+                <!-- Similar structure but different styling -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
